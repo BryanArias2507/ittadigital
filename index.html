@@ -17,7 +17,6 @@
     <style type="text/tailwindcss">
        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
-        .hero-bg { background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1305&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; }
         .nav-shadow { transition: box-shadow 0.3s ease-in-out; }
     </style>
 </head>
@@ -26,13 +25,13 @@
     <!-- Header & Navigation -->
     <header id="navbar" class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 nav-shadow">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="text-2xl font-bold text-blue-600">Itta Digital</a>
+            <a href="#inicio" class="block"><img src="assets/logo.svg" alt="Logo de Itta Digital" class="h-8"></a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#inicio" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Inicio</a>
                 <a href="#servicios" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Servicios</a>
                 <a href="#proceso" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Proceso</a>
                 <a href="#nosotros" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Nosotros</a>
-                <a href="#contacto" class=""bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">Consulta Gratuita</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">Consulta Gratuita</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden block py-2 px-6 text-sm hover:bg-gray-200">
                 <!-- Hamburger Icon -->
@@ -51,8 +50,11 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="inicio" class="hero-bg text-white h-[90vh] flex items-center justify-center text-center">
-            <div class="container mx-auto px-6">
+        <section id="inicio" class="relative text-white h-[90vh] flex items-center justify-center text-center overflow-hidden">
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+        <source src="assets/hero-video.mp4" type="video/mp4">Tu navegador no soporta el video.
+    </video>
+    <div class="absolute top-0 left-0 w-full h-full bg-black/85 z-10"></div>
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Itta Digital: Tu Socio en la Transformación Digital</h1>
                 <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Creamos sitios web profesionales y dinámicos que impulsan el crecimiento de emprendedores y PyMEs.</p>
                 <a href="#servicios" class="bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">Descubre Cómo Podemos Ayudarte</a>
@@ -245,9 +247,9 @@
                         <li><a href="tel:+123456789" class="footer-link">(+52) 664-749-0959</a></li>
                     </ul>
                     <div class="flex justify-center md:justify-start space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">L</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">F</a>
-                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">I</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">LinkedIn</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
                     </div>
                 </div>
             </div>
