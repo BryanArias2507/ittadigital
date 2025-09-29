@@ -15,88 +15,26 @@
     
     <!-- Custom Styles processed by Tailwind CDN -->
     <style type="text/tailwindcss">
-        /* Global Body & Font Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F9FA;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Hero Section Background */
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/212529/E9ECEF?text=Itta+Digital');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Navigation Bar Shadow on Scroll */
-        .nav-shadow {
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        /* Reusable Component-like Classes */
-        .nav-link {
-            @apply text-gray-600 hover:text-blue-600 hover:underline transition duration-300;
-        }
-
-        .mobile-nav-link {
-            @apply block py-2 px-6 text-sm hover:bg-gray-200;
-        }
-
-        .cta-button-primary {
-            @apply bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block;
-        }
-
-        .cta-button-secondary {
-            @apply bg-white text-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-200 transition duration-300 transform hover:scale-105 inline-block;
-        }
-
-        .service-card {
-            @apply bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300;
-        }
-
-        .service-icon {
-            @apply text-4xl text-blue-600 mb-4;
-        }
-
-        .timeline-item {
-            @apply relative md:grid md:grid-cols-2 md:gap-8 items-center;
-        }
-
-        .timeline-dot {
-            @apply hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full;
-        }
-
-        .feature-icon {
-            @apply bg-blue-100 text-blue-600 rounded-full p-2 mr-4 mt-1;
-        }
-
-        .footer-link {
-            @apply text-gray-400 hover:text-white transition duration-300;
-        }
-
-        .social-icon {
-            @apply text-gray-400 hover:text-white transition duration-300;
-        }
+       body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .hero-bg { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1305&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; }
+        .nav-shadow { transition: box-shadow 0.3s ease-in-out; }
     </style>
 </head>
 <body class="text-gray-800">
 
     <!-- Header & Navigation -->
-    <header id="navbar" class="bg-white sticky top-0 z-50 nav-shadow">
+    <header id="navbar" class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 nav-shadow">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#inicio" class="text-2xl font-bold text-blue-600">Itta Digital</a>
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#inicio" class="nav-link">Inicio</a>
-                <a href="#servicios" class="nav-link">Servicios</a>
-                <a href="#proceso" class="nav-link">Proceso</a>
-                <a href="#nosotros" class="nav-link">Nosotros</a>
-                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Consulta Gratuita</a>
+                <a href="#inicio" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Inicio</a>
+                <a href="#servicios" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Servicios</a>
+                <a href="#proceso" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Proceso</a>
+                <a href="#nosotros" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Nosotros</a>
+                <a href="#contacto" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110"">Consulta Gratuita</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+            <button id="mobile-menu-button" class="block py-2 px-6 text-sm hover:bg-gray-200">
                 <!-- Hamburger Icon -->
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
@@ -117,7 +55,7 @@
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Itta Digital: Tu Socio en la Transformación Digital</h1>
                 <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Creamos sitios web profesionales y dinámicos que impulsan el crecimiento de emprendedores y PyMEs.</p>
-                <a href="#servicios" class="cta-button-primary">Descubre Cómo Podemos Ayudarte</a>
+                <a href="#servicios" class="bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">Descubre Cómo Podemos Ayudarte</a>
             </div>
         </section>
 
@@ -141,32 +79,32 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Service Card -->
-                    <div class="service-card">
-                        <div class="service-icon">🎨</div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300">
+                        <div class="text-4xl text-blue-600 mb-4">🎨</div>
                         <h3 class="text-xl font-bold mb-2">Diseño y Desarrollo a Medida</h3>
                         <p class="text-gray-600">Creamos sitios únicos desde cero, alineados con tu identidad de marca y objetivos, usando plataformas intuitivas y fáciles de administrar.</p>
                     </div>
                     <!-- Service Card -->
-                    <div class="service-card">
-                        <div class="service-icon">📱</div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300">
+                        <div class="text-4xl text-blue-600 mb-4">📱</div>
                         <h3 class="text-xl font-bold mb-2">Diseño Responsivo</h3>
                         <p class="text-gray-600">Garantizamos una experiencia de usuario impecable en cualquier dispositivo, crucial para el ranking en buscadores y la satisfacción del cliente.</p>
                     </div>
                     <!-- Service Card -->
-                    <div class="service-card">
-                        <div class="service-icon">🛒</div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300">
+                        <div class="text-4xl text-blue-600 mb-4">🛒</div>
                         <h3 class="text-xl font-bold mb-2">Soluciones E-commerce</h3>
                         <p class="text-gray-600">Desarrollamos tiendas en línea robustas y seguras, con pasarelas de pago integradas para que vendas de manera eficiente y escalable.</p>
                     </div>
                     <!-- Service Card -->
-                    <div class="service-card">
-                        <div class="service-icon">📈</div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300">
+                        <div class="text-4xl text-blue-600 mb-4">📈</div>
                         <h3 class="text-xl font-bold mb-2">Optimización SEO</h3>
                         <p class="text-gray-600">Construimos tu sitio web con las mejores prácticas de SEO para que tus clientes potenciales te encuentren más fácilmente en Google.</p>
                     </div>
                     <!-- Service Card -->
-                    <div class="service-card">
-                        <div class="service-icon">🛠️</div>
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300">
+                        <div class="text-4xl text-blue-600 mb-4">🛠️</div>
                         <h3 class="text-xl font-bold mb-2">Mantenimiento y Soporte</h3>
                         <p class="text-gray-600">Ofrecemos planes de mantenimiento para asegurar que tu sitio web se mantenga actualizado, seguro y funcionando a máxima velocidad.</p>
                     </div>
@@ -227,7 +165,7 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <img src="https://placehold.co/600x400/007BFF/FFFFFF?text=Equipo+Itta" alt="Equipo de Itta Digital" class="rounded-lg shadow-xl w-full">
+                        <img src="https://images.unsplash.com/photo-1521737451536-00a86f630f3e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Equipo de Itta Digital" class="rounded-lg shadow-xl w-full">
                     </div>
                     <div>
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Por Qué Elegir a Itta Digital?</h2>
@@ -293,10 +231,10 @@
                 <div>
                     <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
                     <ul class="space-y-2">
-                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
-                        <li><a href="#servicios" class="footer-link">Servicios</a></li>
-                        <li><a href="#proceso" class="footer-link">Proceso</a></li>
-                        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+                        <li><a href="#proceso" class="text-gray-400 hover:text-white transition duration-300">Proceso</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
                     </ul>
                 </div>
                 <!-- Footer Column 3 -->
@@ -307,9 +245,9 @@
                         <li><a href="tel:+123456789" class="footer-link">(+52) 664-749-0959</a></li>
                     </ul>
                     <div class="flex justify-center md:justify-start space-x-4 mt-4">
-                        <a href="#" class="social-icon">L</a>
-                        <a href="#" class="social-icon">F</a>
-                        <a href="#" class="social-icon">I</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">L</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">F</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">I</a>
                     </div>
                 </div>
             </div>
