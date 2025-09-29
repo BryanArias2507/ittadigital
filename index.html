@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itta Digital: Tu Socio en la Transformación Digital</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles processed by Tailwind CDN -->
+    <style type="text/tailwindcss">
+        /* Global Body & Font Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section Background */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://placehold.co/1920x1080/212529/E9ECEF?text=Itta+Digital');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Navigation Bar Shadow on Scroll */
+        .nav-shadow {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        /* Reusable Component-like Classes */
+        .nav-link {
+            @apply text-gray-600 hover:text-blue-600 hover:underline transition duration-300;
+        }
+
+        .mobile-nav-link {
+            @apply block py-2 px-6 text-sm hover:bg-gray-200;
+        }
+
+        .cta-button-primary {
+            @apply bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block;
+        }
+
+        .cta-button-secondary {
+            @apply bg-white text-blue-600 px-8 py-4 rounded-md text-lg font-semibold hover:bg-gray-200 transition duration-300 transform hover:scale-105 inline-block;
+        }
+
+        .service-card {
+            @apply bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-2 border-transparent hover:border-blue-300;
+        }
+
+        .service-icon {
+            @apply text-4xl text-blue-600 mb-4;
+        }
+
+        .timeline-item {
+            @apply relative md:grid md:grid-cols-2 md:gap-8 items-center;
+        }
+
+        .timeline-dot {
+            @apply hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full;
+        }
+
+        .feature-icon {
+            @apply bg-blue-100 text-blue-600 rounded-full p-2 mr-4 mt-1;
+        }
+
+        .footer-link {
+            @apply text-gray-400 hover:text-white transition duration-300;
+        }
+
+        .social-icon {
+            @apply text-gray-400 hover:text-white transition duration-300;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="bg-white sticky top-0 z-50 nav-shadow">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-bold text-blue-600">Itta Digital</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#proceso" class="nav-link">Proceso</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Consulta Gratuita</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <!-- Hamburger Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#inicio" class="mobile-nav-link">Inicio</a>
+            <a href="#servicios" class="mobile-nav-link">Servicios</a>
+            <a href="#proceso" class="mobile-nav-link">Proceso</a>
+            <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
+            <a href="#contacto" class="block py-2 px-6 text-sm hover:bg-gray-200 bg-blue-50 text-blue-700 font-semibold">Consulta Gratuita</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-bg text-white h-[90vh] flex items-center justify-center text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Itta Digital: Tu Socio en la Transformación Digital</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Creamos sitios web profesionales y dinámicos que impulsan el crecimiento de emprendedores y PyMEs.</p>
+                <a href="#servicios" class="cta-button-primary">Descubre Cómo Podemos Ayudarte</a>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section id="mision" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Potenciamos tu Visión en el Mundo Digital</h2>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-3 items-center gap-8">
+                    <div class="text-6xl text-blue-200">🚀</div>
+                    <p class="md:col-span-2 text-left text-gray-600 text-lg">En el competitivo mercado actual, tener una presencia en línea es una necesidad. Nacimos para democratizar el acceso a tecnología web de alta calidad, transformando tu visión de negocio en un sitio web potente, funcional y visualmente atractivo que trabaja activamente para alcanzar tus objetivos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Diseño y Desarrollo Web Centrado en Resultados</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Vamos más allá del diseño. Construimos experiencias digitales integrales que conectan con tu audiencia y convierten visitantes en clientes.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card -->
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3 class="text-xl font-bold mb-2">Diseño y Desarrollo a Medida</h3>
+                        <p class="text-gray-600">Creamos sitios únicos desde cero, alineados con tu identidad de marca y objetivos, usando plataformas intuitivas y fáciles de administrar.</p>
+                    </div>
+                    <!-- Service Card -->
+                    <div class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3 class="text-xl font-bold mb-2">Diseño Responsivo</h3>
+                        <p class="text-gray-600">Garantizamos una experiencia de usuario impecable en cualquier dispositivo, crucial para el ranking en buscadores y la satisfacción del cliente.</p>
+                    </div>
+                    <!-- Service Card -->
+                    <div class="service-card">
+                        <div class="service-icon">🛒</div>
+                        <h3 class="text-xl font-bold mb-2">Soluciones E-commerce</h3>
+                        <p class="text-gray-600">Desarrollamos tiendas en línea robustas y seguras, con pasarelas de pago integradas para que vendas de manera eficiente y escalable.</p>
+                    </div>
+                    <!-- Service Card -->
+                    <div class="service-card">
+                        <div class="service-icon">📈</div>
+                        <h3 class="text-xl font-bold mb-2">Optimización SEO</h3>
+                        <p class="text-gray-600">Construimos tu sitio web con las mejores prácticas de SEO para que tus clientes potenciales te encuentren más fácilmente en Google.</p>
+                    </div>
+                    <!-- Service Card -->
+                    <div class="service-card">
+                        <div class="service-icon">🛠️</div>
+                        <h3 class="text-xl font-bold mb-2">Mantenimiento y Soporte</h3>
+                        <p class="text-gray-600">Ofrecemos planes de mantenimiento para asegurar que tu sitio web se mantenga actualizado, seguro y funcionando a máxima velocidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="proceso" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Nuestra Filosofía: Colaboración y Transparencia</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Creemos que los mejores resultados surgen de una estrecha colaboración. Nuestro proceso está diseñado para ser claro y centrado en ti.</p>
+                </div>
+                <div class="relative max-w-4xl mx-auto">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block"></div>
+                     <div class="space-y-12">
+                        <!-- Timeline Item 1 -->
+                        <div class="timeline-item">
+                            <div class="md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl font-bold text-blue-600">01. Descubrimiento y Estrategia</h3>
+                                <p class="text-gray-600">Comenzamos por escuchar. Entendemos tu negocio, tu público y tus metas para definir un plan de acción claro.</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <!-- Timeline Item 2 -->
+                         <div class="timeline-item">
+                             <div class="md:col-start-2 md:pl-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl font-bold text-blue-600">02. Diseño y Prototipado</h3>
+                                <p class="text-gray-600">Creamos un diseño visual que refleja tu marca y te presentamos prototipos interactivos para tu aprobación.</p>
+                            </div>
+                           <div class="timeline-dot"></div>
+                        </div>
+                        <!-- Timeline Item 3 -->
+                         <div class="timeline-item">
+                            <div class="md:text-right md:pr-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl font-bold text-blue-600">03. Desarrollo y Programación</h3>
+                                <p class="text-gray-600">Nuestro equipo de expertos da vida al diseño utilizando las tecnologías más modernas, garantizando un sitio rápido y seguro.</p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                        <!-- Timeline Item 4 -->
+                        <div class="timeline-item">
+                            <div class="md:col-start-2 md:pl-8 mb-4 md:mb-0">
+                                <h3 class="text-2xl font-bold text-blue-600">04. Lanzamiento y Optimización</h3>
+                                <p class="text-gray-600">Te acompañamos en el lanzamiento y monitoreamos su rendimiento inicial para optimizar los resultados.</p>
+                            </div>
+                           <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Why Us" Section -->
+        <section id="nosotros" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://placehold.co/600x400/007BFF/FFFFFF?text=Equipo+Itta" alt="Equipo de Itta Digital" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Por Qué Elegir a Itta Digital?</h2>
+                        <ul class="space-y-6">
+                            <!-- Feature Item -->
+                            <li class="flex items-start">
+                                <div class="feature-icon">🏢</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Enfoque en PyMEs</h4>
+                                    <p class="text-gray-600">Entendemos tus limitaciones de presupuesto y tiempo. Ofrecemos soluciones realistas y de alto impacto.</p>
+                                </div>
+                            </li>
+                            <!-- Feature Item -->
+                             <li class="flex items-start">
+                                <div class="feature-icon">💎</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Calidad sin Complejidad</h4>
+                                    <p class="text-gray-600">Te entregamos un producto final profesional sin abrumarte con jerga técnica.</p>
+                                </div>
+                            </li>
+                            <!-- Feature Item -->
+                             <li class="flex items-start">
+                                <div class="feature-icon">🤝</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Relaciones a Largo Plazo</h4>
+                                    <p class="text-gray-600">Buscamos crecer contigo. Tu éxito es el reflejo de nuestro trabajo.</p>
+                                </div>
+                            </li>
+                            <!-- Feature Item -->
+                             <li class="flex items-start">
+                                <div class="feature-icon">🚀</div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Resultados Medibles</h4>
+                                    <p class="text-gray-600">Nos enfocamos en crear sitios que generan prospectos, ventas y crecimiento tangible para tu negocio.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contacto" class="py-20 bg-blue-600 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para dar el siguiente paso?</h2>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Permítenos ayudarte a construir la presencia digital que tu negocio merece.</p>
+                <a href="mailto:contacto@ittadigital.com" class="cta-button-secondary">Obtén tu Consulta Gratuita Hoy</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Footer Column 1 -->
+                <div>
+                    <h3 class="text-2xl font-bold">Itta Digital</h3>
+                    <p class="text-gray-400 mt-2">Transformando visiones en realidades digitales.</p>
+                </div>
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
+                        <li><a href="#servicios" class="footer-link">Servicios</a></li>
+                        <li><a href="#proceso" class="footer-link">Proceso</a></li>
+                        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+                    </ul>
+                </div>
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                     <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:contacto@ittadigital.com" class="footer-link">contacto@ittadigital.com</a></li>
+                        <li><a href="tel:+123456789" class="footer-link">(+52) 664-749-0959</a></li>
+                    </ul>
+                    <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                        <a href="#" class="social-icon">L</a>
+                        <a href="#" class="social-icon">F</a>
+                        <a href="#" class="social-icon">I</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Bar -->
+        <div class="bg-gray-900 py-4">
+            <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+                Copyright &copy; <span id="year"></span> Itta Digital. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // --- Mobile Menu Functionality ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // --- Smooth Scrolling for Anchor Links & Mobile Menu Closing ---
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            anchorLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(this.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                    // Close mobile menu on link click
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // --- Navbar Shadow on Scroll ---
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('shadow-md');
+                    } else {
+                        navbar.classList.remove('shadow-md');
+                    }
+                });
+            }
+
+            // --- Dynamic Year in Footer ---
+            const yearSpan = document.getElementById('year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
+
