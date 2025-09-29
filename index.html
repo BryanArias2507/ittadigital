@@ -17,7 +17,7 @@
     <style type="text/tailwindcss">
        body { font-family: 'Inter', sans-serif; background-color: #F8F9FA; }
         h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
-        .hero-bg { background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1305&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; }
+        .hero-bg { background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1305&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center; }
         .nav-shadow { transition: box-shadow 0.3s ease-in-out; }
     </style>
 </head>
@@ -32,9 +32,9 @@
                 <a href="#servicios" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Servicios</a>
                 <a href="#proceso" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Proceso</a>
                 <a href="#nosotros" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110">Nosotros</a>
-                <a href="#contacto" class="inline-block text-gray-600 hover:text-blue-600 transition duration-300 ease-in-out hover:scale-110"">Consulta Gratuita</a>
+                <a href="#contacto" class=""bg-blue-600 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block">Consulta Gratuita</a>
             </nav>
-            <button id="mobile-menu-button" class="block py-2 px-6 text-sm hover:bg-gray-200">
+            <button id="mobile-menu-button" class="md:hidden block py-2 px-6 text-sm hover:bg-gray-200">
                 <!-- Hamburger Icon -->
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
@@ -45,7 +45,7 @@
             <a href="#servicios" class="mobile-nav-link">Servicios</a>
             <a href="#proceso" class="mobile-nav-link">Proceso</a>
             <a href="#nosotros" class="mobile-nav-link">Nosotros</a>
-            <a href="#contacto" class="block py-2 px-6 text-sm hover:bg-gray-200 bg-blue-50 text-blue-700 font-semibold">Consulta Gratuita</a>
+            <a href="#contacto" class="mobile-nav-link">Consulta Gratuita</a>
         </div>
     </header>
 
@@ -124,36 +124,36 @@
                     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-blue-200 hidden md:block"></div>
                      <div class="space-y-12">
                         <!-- Timeline Item 1 -->
-                        <div class="timeline-item">
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8 items-center">
                             <div class="md:text-right md:pr-8 mb-4 md:mb-0">
                                 <h3 class="text-2xl font-bold text-blue-600">01. Descubrimiento y Estrategia</h3>
                                 <p class="text-gray-600">Comenzamos por escuchar. Entendemos tu negocio, tu público y tus metas para definir un plan de acción claro.</p>
                             </div>
-                            <div class="timeline-dot"></div>
+                            <div class="hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full z-10"></div>
                         </div>
                         <!-- Timeline Item 2 -->
-                         <div class="timeline-item">
+                         <div class="relative md:grid md:grid-cols-2 md:gap-8 items-center">
                              <div class="md:col-start-2 md:pl-8 mb-4 md:mb-0">
                                 <h3 class="text-2xl font-bold text-blue-600">02. Diseño y Prototipado</h3>
                                 <p class="text-gray-600">Creamos un diseño visual que refleja tu marca y te presentamos prototipos interactivos para tu aprobación.</p>
                             </div>
-                           <div class="timeline-dot"></div>
+                           <div class="hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full z-10"></div>
                         </div>
                         <!-- Timeline Item 3 -->
-                         <div class="timeline-item">
+                         <div class="relative md:grid md:grid-cols-2 md:gap-8 items-center">
                             <div class="md:text-right md:pr-8 mb-4 md:mb-0">
                                 <h3 class="text-2xl font-bold text-blue-600">03. Desarrollo y Programación</h3>
                                 <p class="text-gray-600">Nuestro equipo de expertos da vida al diseño utilizando las tecnologías más modernas, garantizando un sitio rápido y seguro.</p>
                             </div>
-                            <div class="timeline-dot"></div>
+                            <div class="hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full z-10"></div>
                         </div>
                         <!-- Timeline Item 4 -->
-                        <div class="timeline-item">
+                        <div class="relative md:grid md:grid-cols-2 md:gap-8 items-center">
                             <div class="md:col-start-2 md:pl-8 mb-4 md:mb-0">
                                 <h3 class="text-2xl font-bold text-blue-600">04. Lanzamiento y Optimización</h3>
                                 <p class="text-gray-600">Te acompañamos en el lanzamiento y monitoreamos su rendimiento inicial para optimizar los resultados.</p>
                             </div>
-                           <div class="timeline-dot"></div>
+                           <div class="hidden md:block absolute left-1/2 -translate-x-1/2 bg-blue-600 w-4 h-4 rounded-full z-10"></div>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         <ul class="space-y-6">
                             <!-- Feature Item -->
                             <li class="flex items-start">
-                                <div class="feature-icon">🏢</div>
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 text-2xl flex-shrink-0">🏢</div>
                                 <div>
                                     <h4 class="font-bold text-lg">Enfoque en PyMEs</h4>
                                     <p class="text-gray-600">Entendemos tus limitaciones de presupuesto y tiempo. Ofrecemos soluciones realistas y de alto impacto.</p>
@@ -180,7 +180,7 @@
                             </li>
                             <!-- Feature Item -->
                              <li class="flex items-start">
-                                <div class="feature-icon">💎</div>
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 text-2xl flex-shrink-0">💎</div>
                                 <div>
                                     <h4 class="font-bold text-lg">Calidad sin Complejidad</h4>
                                     <p class="text-gray-600">Te entregamos un producto final profesional sin abrumarte con jerga técnica.</p>
@@ -188,7 +188,7 @@
                             </li>
                             <!-- Feature Item -->
                              <li class="flex items-start">
-                                <div class="feature-icon">🤝</div>
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 text-2xl flex-shrink-0">🤝</div>
                                 <div>
                                     <h4 class="font-bold text-lg">Relaciones a Largo Plazo</h4>
                                     <p class="text-gray-600">Buscamos crecer contigo. Tu éxito es el reflejo de nuestro trabajo.</p>
@@ -196,7 +196,7 @@
                             </li>
                             <!-- Feature Item -->
                              <li class="flex items-start">
-                                <div class="feature-icon">🚀</div>
+                                <div class="bg-blue-100 text-blue-600 rounded-full p-3 mr-4 text-2xl flex-shrink-0">🚀</div>
                                 <div>
                                     <h4 class="font-bold text-lg">Resultados Medibles</h4>
                                     <p class="text-gray-600">Nos enfocamos en crear sitios que generan prospectos, ventas y crecimiento tangible para tu negocio.</p>
